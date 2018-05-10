@@ -46,15 +46,24 @@ def read():
 
 # print(ts.get_ppi())
 
-print(ts.get_realtime_quotes("601318"))
-# print(ts.get_realtime_quotes("000651"))
-# print(ts.get_realtime_quotes("002049"))
+# print(ts.get_realtime_quotes("601318")) #67.49
+# print(ts.get_realtime_quotes("600030")) #19.19
+# print(ts.get_realtime_quotes("600196")) #37.77
+# print(ts.get_realtime_quotes("600316")) #12.26
+# print(ts.get_realtime_quotes("600887")) #26.43
+# print(ts.get_realtime_quotes("601069")) #20.795
+# print(ts.get_realtime_quotes("603466")) #69.07
+
+# code =[]
+code =["601318", "600030", "600196", "600887", "601069", "603466", "000858", "002230","000538","000002","600567"]
+print(ts.get_realtime_quotes(code))
+
 
 # df = ts.get_realtime_quotes("601318")
 # print(df.to_json())
 
 # dadan
-df = ts.get_sina_dd('000651', date='2018-04-26', vol=100)
-df.to_csv('/Users/luosonglin/Desktop/Trade/000651-dd-' + date.strftime('%Y-%m-%d') + 'AM.csv',
-          columns=['code', 'name', 'time', 'price', 'volume', 'preprice', 'type'],
-          encoding='utf_8_sig')
+# df = ts.get_sina_dd('000651', date='2018-04-26', vol=100)
+# df.to_csv('/Users/luosonglin/Desktop/Trade/000651-dd-' + date.strftime('%Y-%m-%d') + 'AM.csv',
+#           columns=['code', 'name', 'time', 'price', 'volume', 'preprice', 'type'],
+#           encoding='utf_8_sig')
